@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/iden3/go-merkletree/db"
+	"github.com/rarimo/go-merkletree/db"
 )
 
 // Storage implements the db.Storage interface

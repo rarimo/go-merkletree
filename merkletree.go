@@ -11,7 +11,7 @@ import (
 	"sync"
 
 	cryptoUtils "github.com/iden3/go-iden3-crypto/utils"
-	"github.com/iden3/go-merkletree/db"
+	"github.com/rarimo/go-merkletree/db"
 )
 
 const (

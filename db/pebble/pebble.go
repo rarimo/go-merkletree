@@ -2,7 +2,7 @@ package pebble
 
 import (
 	"github.com/cockroachdb/pebble"
-	"github.com/iden3/go-merkletree/db"
+	"github.com/rarimo/go-merkletree/db"
 )
 
 // Storage implements the db.Storage interface
@@ -52,8 +52,9 @@ func (p *Storage) Get(key []byte) ([]byte, error) {
 	return v, err
 }
 
-//nolint:lll
 // https://github.com/cockroachdb/pebble/pull/923/files#diff-c2ade2f386c41794d5ebc57ee49b57a5fca8082e03255e5bff13977cbc061287R39
+//
+//nolint:lll
 func keyUpperBound(b []byte) []byte {
 	end := make([]byte, len(b))
 	copy(end, b)
