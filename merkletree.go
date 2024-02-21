@@ -758,8 +758,8 @@ func getPath(numLevels int, k []byte) []bool {
 
 // NodeAux contains the auxiliary node used in a non-existence proof.
 type NodeAux struct {
-	Key   *Hash
-	Value *Hash
+	Key   *Hash `json:"key"`
+	Value *Hash `json:"value"`
 }
 
 // Proof defines the required elements for a MT proof of existence or
