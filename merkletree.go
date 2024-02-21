@@ -767,14 +767,14 @@ type NodeAux struct {
 type Proof struct {
 	// existence indicates wether this is a proof of existence or
 	// non-existence.
-	Existence bool
+	Existence bool `json:"existence"`
 	// depth indicates how deep in the tree the proof goes.
 	depth uint
 	// notempties is a bitmap of non-empty Siblings found in Siblings.
 	notempties [ElemBytesLen - proofFlagsLen]byte
 	// Siblings is a list of non-empty sibling keys.
-	Siblings []*Hash
-	NodeAux  *NodeAux
+	Siblings []*Hash  `json:"siblings"`
+	NodeAux  *NodeAux `json:"nodeAux,omitempty"`
 }
 
 // NewProofFromBytes parses a byte array into a Proof.
